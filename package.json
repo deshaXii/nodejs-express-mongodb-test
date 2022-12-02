@@ -1,0 +1,36 @@
+{
+  "name": "express-mongoose-store",
+  "version": "1.0.0",
+  "description": "a simple store that build with nodejs express and mongodb database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js localhost 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deshaXii/nodejs-express-mongodb-test.git"
+  },
+  "keywords": [
+    "store",
+    "ecommerce",
+    "express",
+    "mongodb",
+    "mongoose",
+    "nodejs",
+    "es6"
+  ],
+  "author": "deshaxii",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deshaXii/nodejs-express-mongodb-test/issues"
+  },
+  "homepage": "https://github.com/deshaXii/nodejs-express-mongodb-test#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.5"
+  }
+}
