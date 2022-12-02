@@ -1,0 +1,22 @@
+<%- include('parts/header'); %>
+<%- include('parts/navbar'); %>
+<%- include('parts/footer'); %>
+
+
+
+<div class="homepage">
+    <div class="container">
+        <div class="row">
+            <% for( let product of products ) { %>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="<%= product.image %>" alt="">
+                    <h4><%= product.name %></h4>
+                    <span><%= product.price%></sp>
+                        <p><%=product.description%></p>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
