@@ -3,6 +3,7 @@ const path = require("path");
 const mongoose = require('mongoose');
 
 const homeRouter = require('./routes/home.route')
+const productRouter = require('./routes/product.route')
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 app.use('/', homeRouter)
+app.use('/product', productRouter)
 
 app.listen('3000', () => {
     console.log('app running');

@@ -1,11 +1,19 @@
 const ProductsModel = require('../models/products.model')
 
 exports.getHome = (req, res, next) => {
-    ProductsModel.getAllProducts().then(products => {
-        res.render('index', {
-            products
+    const categories = ['clothes', 'computers', 'phones'];
+    let category = req.query.category;
+    if (category && categories.includes(category)) {
+        ProductsModel.getProductsByCategory(category).then(products => {
+            res.render('index', {
+                products
+            })
         })
-    })
-
-    // render to homepage
+    } else {
+        ProductsModel.getAllProducts().then(products => {
+            res.render('index', {
+                products
+            })
+        })
+    }
 }
